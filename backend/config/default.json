@@ -1,0 +1,10 @@
+{
+
+    "kcalculateOnAtlas": {
+      "dbConfig": {
+        "host": "localhost",
+        "port": 5000,
+        "dbName": "mongodb+srv://countingbros:countingbros@kcalculatedb.uxas5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority/nutrition"
+      }
+    }
+  }

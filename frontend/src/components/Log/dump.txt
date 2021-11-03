@@ -1,0 +1,65 @@
+ <form>
+<div className="grid grid-cols-2">
+          
+          <div className="grid grid-rows-4 my-0 ">
+            <div><label>Meal Type</label>
+           <select
+               name="MealType"
+               onChange={handleMealTypeChange}
+               value={data.mealtype}
+            //    id={index}
+               type="text"
+             >
+               <option value="Snack">Snack</option>
+               <option value="Breakfast">Breakfast</option>
+               <option value="Lunch">Lunch</option>
+               <option value="Dinner">Dinner</option>
+              </select>
+              </div>
+  
+              <div>
+            <input
+             onChange={handleDateChange}
+             type= 'date'
+             className="input"
+                        ></input>
+              </div>
+  
+              <div>
+              <label className="text-xs"> No. Serving</label>
+                        <input
+                            name="weight"
+               onChange={handleInputChange}
+               value={data.servingSize}
+               placeholder={data.weight}
+               type="text"
+            //    id={index}
+             ></input>
+              </div>
+              <div className>
+              {/* <button id={index} onClick={handleCalculate} className="w-2/3 bg-black text-white uppercase tracking-wider px-5 py-1 mt-2 text-xs shadow-md"> Calculate </button> */}
+              <button onClick={handleCalculate} className="w-2/3 bg-black text-white uppercase tracking-wider px-5 py-1 mt-2 text-xs shadow-md"> Calculate </button>
+              </div>
+            </div>
+        
+            <div className='my-auto'>
+              <div className="text-3xl capitalize pt-1">
+              <strong>{data.name}</strong> <br />
+  
+              <strong>⚡</strong> {data.calories} 
+              </div>
+              
+              <div className="text-md pt-1">
+              <strong>C</strong> {data.carbohydrates}
+              <strong>P</strong> {data.protein}
+              <strong>F</strong> {data.fats}
+              <strong>(g)</strong> {data.weight}
+              </div>
+              <button className=" bg-black text-white uppercase tracking-wider px-3 py-1 mt-2 text-xs shadow-md" onSubmit={submitToDataBase}> Add to Log </button>
+            </div>
+        
+    
+          
+  
+          </div>
+          </form>
